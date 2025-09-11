@@ -1,11 +1,202 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfólio - ERIC FRANÇA ARANTES DOS SANTOS</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eric França Arantes — Portfólio</title>
+  <meta name="description" content="Portfólio de Eric França Arantes dos Santos — Estudante de Desenvolvimento de Software Multiplataforma (Fatec Jacareí) e Economista (UNESP). Projetos, certificações e contato." />
+  <meta name="theme-color" content="#0b3d91" />
+  <meta property="og:title" content="Eric França Arantes — Portfólio" />
+  <meta property="og:description" content="Projetos acadêmicos, habilidades, certificações e contato." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Bem vindo ao Portfólio de ERIC FRANÇA ARANTES DOS SANTOS</h1>
+  <header>
+    <div class="container nav" role="navigation" aria-label="Principal">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">EA</div>
+        <span>Eric França Arantes</span>
+      </div>
+      <nav class="links" aria-label="Seções do site">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#certificados">Certificados</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="nav-right">
+        <button id="themeBtn" class="theme-toggle" aria-label="Alternar tema">🌓</button>
+        <button id="menuBtn" class="btn ghost menu-toggle" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+        <a class="btn primary" href="#contato">Fale comigo</a>
+      </div>
+    </div>
+    <div id="mobileMenu" class="container" hidden>
+      <nav class="links" style="display:grid; grid-template-columns: 1fr; gap: 10px; padding-bottom: 12px;">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#certificados">Certificados</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container" id="inicio">
+      <div class="hero-grid">
+        <div>
+          <span class="kicker">Portfólio</span>
+          <h1>Olá! Sou <span style="background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent;">Eric França Arantes</span> — <wbr>estudante de Desenvolvimento de Software Multiplataforma (Fatec Jacareí) e Economista (UNESP).</h1>
+          <p class="lead">Transição de carreira para TI com base sólida em finanças. Experiência acadêmica em <strong>desenvolvimento web</strong>, <strong>banco de dados</strong> e <strong>metodologias ágeis</strong>. Busco construir soluções úteis, bem estruturadas e focadas no usuário.</p>
+          <div class="actions">
+            <a class="btn primary" href="#projetos">Ver projetos</a>
+            <a class="btn ghost" href="#certificados">Certificados</a>
+            <button class="btn ghost" onclick="window.print()">Versão para impressão</button>
+          </div>
+        </div>
+        <div class="photo" aria-label="Foto profissional">
+          <!-- Sua foto profissional -->
+          <img src="img/foto-perfil.png" alt="Foto de perfil" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="container">
+      <h2>Sobre</h2>
+      <div class="grid">
+        <div class="card col-6">
+          <h3>Apresentação</h3>
+          <p>Atualmente cursando <strong>Desenvolvimento de Software Multiplataforma</strong> (início: 02/2025) na <strong>Fatec Jacareí</strong> e graduado em <strong>Ciências Econômicas</strong> (03/2022) pela <strong>UNESP</strong>. Trago a experiência e disciplina do mercado financeiro para a construção de software: organização, comunicação clara e foco em resultados.</p>
+          <div class="tags">
+            <span class="tag">Comunicação</span>
+            <span class="tag">Trabalho em equipe</span>
+            <span class="tag">Proatividade</span>
+            <span class="tag">Atenção a detalhes</span>
+          </div>
+        </div>
+        <div class="card col-6">
+          <h3>Contato</h3>
+          <ul class="list" aria-label="Informações de contato">
+            <li class="item"><strong>E-mail:</strong> <span><a href="mailto:ericfranca.dev@gmail.com">ericfranca.dev@gmail.com</a></span></li>
+            <li class="item"><strong>LinkedIn:</strong> <span><a href="https://www.linkedin.com/in/eric-f-arantes" target="_blank" rel="noopener">linkedin.com/in/eric-f-arantes</a></span></li>
+            <li class="item"><strong>Telefone:</strong> <span>(12) 98237-0804</span></li>
+            <li class="item"><strong>Cidade:</strong> <span>Jacareí — SP</span></li>
+          </ul>
+          <div class="spacer"></div>
+          <div class="actions">
+            <a class="btn ghost" href="docs/Curriculo_TI.pdf" download>Baixar CV (TI)</a>
+            <a class="btn ghost" href="docs/Curriculo_Financas.pdf" download>Baixar CV (Finanças)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="container">
+      <h2>Projetos em Destaque</h2>
+      <div class="grid" id="projectsGrid" aria-live="polite"></div>
+      <div class="spacer"></div>
+      <div class="actions center">
+        <button class="btn ghost" id="showAll">Ver todos</button>
+        <button class="btn ghost" id="showAcademic">Projetos Acadêmicos</button>
+        <button class="btn ghost" id="showPersonal">Projetos Pessoais</button>
+      </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section id="habilidades" class="container">
+      <h2>Habilidades & Tecnologias</h2>
+      <div class="grid">
+        <div class="card col-6">
+          <h3>Desenvolvimento</h3>
+          <p>Foco em front-end e fundamentos de back-end com atenção à organização do código, semântica e UX.</p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">Scrum</span>
+            <span class="tag">Linux (básico)</span>
+            <span class="tag">Cisco Packet Tracer</span>
+          </div>
+        </div>
+        <div class="card col-6">
+          <h3>Finanças</h3>
+          <p>Background sólido no setor financeiro, com certificações do mercado e experiência em atendimento e análise.</p>
+          <div class="tags">
+            <span class="tag">CEA</span>
+            <span class="tag">CPA-20</span>
+            <span class="tag">ANCORD</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Comunicação</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICADOS -->
+    <section id="certificados" class="container">
+      <h2>Certificados</h2>
+      <div class="grid">
+        <!-- (certificados já listados, sem mudanças) -->
+        <!-- ... -->
+      </div>
+      <div class="spacer"></div>
+      <div class="center">
+        <button class="btn ghost" id="certBtn">Ver lista completa</button>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="container">
+      <h2>Contato</h2>
+      <div class="grid">
+        <div class="card col-6">
+          <h3>Vamos conversar?</h3>
+          <p>Aberto a oportunidades de estágio/trainee em TI e a colaborar em projetos acadêmicos. Entre em contato por e-mail ou LinkedIn — respondo com rapidez.</p>
+          <div class="actions">
+            <a class="btn primary" href="mailto:ericfranca.dev@gmail.com">Enviar e-mail</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/eric-f-arantes" target="_blank" rel="noopener">Abrir LinkedIn</a>
+          </div>
+        </div>
+        <div class="card col-6">
+          <h3>Links úteis</h3>
+          <ul class="list">
+            <li class="item"><strong>CV (TI):</strong> <span><a href="docs/Curriculo_TI.pdf" download>Download</a></span></li>
+            <li class="item"><strong>CV (Finanças):</strong> <span><a href="docs/Curriculo_Financas.pdf" download>Download</a></span></li>
+            <li class="item"><strong>GitHub:</strong> <span><a href="https://github.com/Ericfranca90" target="_blank">github.com/Ericfranca90</a></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container">
+      <p>© <span id="year"></span> Eric França Arantes — Portfólio acadêmico. Construído com HTML, CSS e JavaScript (client-side).</p>
+    </footer>
+  </main>
+
+  <!-- Certificates modal -->
+  <dialog id="certModal" aria-labelledby="certTitle">
+    <div class="modal">
+      <header class="nav">
+        <h3 id="certTitle">Lista detalhada de certificados</h3>
+        <button id="closeModal" class="theme-toggle" aria-label="Fechar">✕</button>
+      </header>
+      <div class="container">
+        <div class="cert-grid" id="certGrid"></div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+  </dialog>
+
+  <button id="toTop" class="btn primary" style="position: fixed; right: 16px; bottom: 16px; display:none;">↑ Topo</button>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
