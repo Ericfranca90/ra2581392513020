@@ -3,7 +3,7 @@ const DATA = {
         {
           title: "Sistema Web de Horários Acadêmicos",
           type: "Acadêmico",
-          desc: "Aplicação web com filtros por curso, ambiente, turno e turma. Destaque visual da sala selecionada e exibição de disciplinas/professores.",
+          desc: "Aplicação web com filtros por curso, ambiente, turno e turma. Destaque visual da sala selecionada e exibição de disciplinas/professores. Contribuição sendo Scrum Master, desenvolvedor front-end e back-end.",
           tech: ["HTML", "CSS", "JavaScript", "MySQL", "Scrum"],
           year: 2025,
         },
@@ -16,25 +16,55 @@ const DATA = {
         },
         {
           title: "Consulta de Mega-Sena",
-          type: "Pessoal",
-          desc: "Site com banco de dados para consultar sorteios passados e explorar estatísticas básicas.",
+          type: "Acadêmico",
+          desc: "Site com banco de dados para consultar sorteios passados e explorar estatísticas básicas. Contribuição no front-end e back-end.",
           tech: ["HTML", "CSS", "JS", "Banco de Dados"],
           year: 2025,
         },
         {
           title: "Exercícios Node.js/Express",
           type: "Acadêmico",
-          desc: "Criação de rotas e manipulação de parâmetros (URL, query e corpo).",
+          desc: "Criação de rotas e manipulação de parâmetros (URL, query e corpo). Contribuição no front-end e back-end.",
           tech: ["Node.js", "Express"],
           year: 2025,
         },
         {
           title: "Mapas de Andares da Faculdade",
           type: "Acadêmico",
-          desc: "Lógica dinâmica para exibir salas nos pisos Térreo/1º/2º, com destaque e informações personalizadas.",
+          desc: "Lógica dinâmica para exibir salas nos pisos Térreo/1º/2º, com destaque e informações personalizadas. Contribuição no front-end e back-end.",
           tech: ["JavaScript", "UX", "Front-end"],
           year: 2025,
         },
+        {
+          title: "Sistema para Visualização e Disseminação de Dados Limnológicos",
+          type: "Acadêmico",
+          desc: "Aplicação web que disponibiliza dados limnológicos e metereológicos coletados nos reservatórios de Furnas Centrais Elétricas S.S., provenitentes do SIMA (Sistema Integrado de Monitoramento Ambiental) e de campanhas manuais em campo. Contribuindo como desenvolvedor no front-end e back-end.",
+          tech: ["JavaScript", "UX", "TypeScript", "Node.js", "Express", "SQL", "Express", "React", "Vite", "Docker", "pgAdmin"],
+          year: 2025,
+        },
+        {
+          title: "Análise de Carteira",
+          type: "Profissional",
+          desc: "Recomendação de carteiras de investimentos com base na teoria de Markowitz, utilizando dados históricos para calcular retornos esperados e riscos. ",
+          tech: ["CEA", "ANCORD", "B3"],
+          year: 2023,
+        },
+        {
+          title: "Conquista de Certificações Financeiras",
+          type: "Profissional",
+          desc: "Obtenção das certificações CPA-20,CEA, e ANCORD para aprimorar conhecimentos em investimentos e mercado financeiro. ",
+          tech: ["CEA", "ANCORD", "B3", "investimentos"],
+          year: 2023,
+        },
+        {
+          title: "Estudo de Linguas",
+          type: "Pessoal",
+          desc: "Estudo de Espanhol e Inglês para aprimoramento pessoal e profissional. ",
+          tech: ["Espanhol", "Ingles", "Linguas"],
+          year: 2019,
+        },
+        
+
       ],
       certificates: [
         { name: "CEA — ANBIMA", date: "11/2022", validity: "11/2025", area: "Finanças" },
@@ -141,3 +171,4 @@ const DATA = {
     document.getElementById('showAll').addEventListener('click', () => renderProjects());
     document.getElementById('showAcademic').addEventListener('click', () => renderProjects('Acadêmico'));
     document.getElementById('showPersonal').addEventListener('click', () => renderProjects('Pessoal'));
+    document.getElementById('showProfissional').addEventListener('click', () => renderProjects('Profissional'));
